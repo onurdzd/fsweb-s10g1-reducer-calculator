@@ -42,9 +42,7 @@ export const reducer = (state, action) => {
     case(CLEAR_DISPLAY):
       return ({
         ...state,
-        operation:initialState.operation,
-        memory:initialState.memory,
-        total:initialState.total,
+        ...initialState
       })
 
       case(MEMORY_PLUS):

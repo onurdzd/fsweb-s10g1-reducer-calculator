@@ -33,22 +33,22 @@ function App() {
             </div>
 
             <div className="row">
-              <CalcButton value={1} onClick={()=>applyNumber(dispatch,1)} />
-              {/* <CalcButton value={1} onClick={()=>addOne(dispatch)} /> */}
-              <CalcButton value={2} onClick={()=>applyNumber(dispatch,2)}/>
-              <CalcButton value={3} onClick={()=>applyNumber(dispatch,3)}/>
+              <CalcButton value={1} onClick={(e)=>applyNumber(dispatch,Number(e.target.value))} />
+              {/* <CalcButton value={1} onClick={(e)=>addOne(dispatch)} /> */}
+              <CalcButton value={2} onClick={(e)=>applyNumber(dispatch,Number(e.target.value))}/>
+              <CalcButton value={3} onClick={(e)=>applyNumber(dispatch,Number(e.target.value))}/>
             </div>
 
             <div className="row">
-              <CalcButton value={4} onClick={()=>applyNumber(dispatch,4)}/>
-              <CalcButton value={5} onClick={()=>applyNumber(dispatch,5)}/>
-              <CalcButton value={6} onClick={()=>applyNumber(dispatch,6)}/>
+              <CalcButton value={4} onClick={(e)=>applyNumber(dispatch,Number(e.target.value))}/>
+              <CalcButton value={5} onClick={(e)=>applyNumber(dispatch,Number(e.target.value))}/>
+              <CalcButton value={6} onClick={(e)=>applyNumber(dispatch,Number(e.target.value))}/>
             </div>
 
             <div className="row">
-              <CalcButton value={7} onClick={()=>applyNumber(dispatch,7)}/>
-              <CalcButton value={8} onClick={()=>applyNumber(dispatch,8)}/>
-              <CalcButton value={9} onClick={()=>applyNumber(dispatch,9)}/>
+              <CalcButton value={7} onClick={(e)=>applyNumber(dispatch,Number(e.target.value))}/>
+              <CalcButton value={8} onClick={(e)=>applyNumber(dispatch,Number(e.target.value))}/>
+              <CalcButton value={9} onClick={(e)=>applyNumber(dispatch,Number(e.target.value))}/>
             </div>
 
             <div className="row">
