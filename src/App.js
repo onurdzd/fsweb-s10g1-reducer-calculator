@@ -27,40 +27,60 @@ function App() {
             </div>
 
             <div className="row">
-              <CalcButton value={"M+"} onClick={()=>memoryPlus(dispatch)}/>
-              <CalcButton value={"MR"} onClick={()=>memoryReplace(dispatch)}/>
-              <CalcButton value={"MC"} onClick={()=>memoryClear(dispatch)}/>
+              <CalcButton
+                onClick={(item) => dispatch(memoryPlus(item))}
+                value={"M+"}
+              />
+              <CalcButton
+                onClick={(number) => dispatch(memoryReplace(number))}
+                value={"MR"}
+              />
+              <CalcButton
+                onClick={() => dispatch(memoryClear())}
+                value={"MC"}
+              />
             </div>
 
             <div className="row">
-              <CalcButton value={1} onClick={(e)=>applyNumber(dispatch,Number(e.target.value))} />
-              {/* <CalcButton value={1} onClick={(e)=>addOne(dispatch)} /> */}
-              <CalcButton value={2} onClick={(e)=>applyNumber(dispatch,Number(e.target.value))}/>
-              <CalcButton value={3} onClick={(e)=>applyNumber(dispatch,Number(e.target.value))}/>
+              <CalcButton onClick={() => dispatch(applyNumber(1))} value={1} />
+               {/* <CalcButton value={1} onClick={(e)=>addOne(dispatch)} /> */}
+              <CalcButton onClick={() => dispatch(applyNumber(2))} value={2} />
+              <CalcButton onClick={() => dispatch(applyNumber(3))} value={3} />
             </div>
 
             <div className="row">
-              <CalcButton value={4} onClick={(e)=>applyNumber(dispatch,Number(e.target.value))}/>
-              <CalcButton value={5} onClick={(e)=>applyNumber(dispatch,Number(e.target.value))}/>
-              <CalcButton value={6} onClick={(e)=>applyNumber(dispatch,Number(e.target.value))}/>
+              <CalcButton onClick={() => dispatch(applyNumber(4))} value={4} />
+              <CalcButton onClick={() => dispatch(applyNumber(5))} value={5} />
+              <CalcButton onClick={() => dispatch(applyNumber(6))} value={6} />
             </div>
 
             <div className="row">
-              <CalcButton value={7} onClick={(e)=>applyNumber(dispatch,Number(e.target.value))}/>
-              <CalcButton value={8} onClick={(e)=>applyNumber(dispatch,Number(e.target.value))}/>
-              <CalcButton value={9} onClick={(e)=>applyNumber(dispatch,Number(e.target.value))}/>
+              <CalcButton onClick={() => dispatch(applyNumber(7))} value={7} />
+              <CalcButton onClick={() => dispatch(applyNumber(8))} value={8} />
+              <CalcButton onClick={() => dispatch(applyNumber(9))} value={9} />
             </div>
 
             <div className="row">
-              <CalcButton value={"+"} onClick={()=>changeOperation(dispatch,"+")}/>
-              <CalcButton value={"*"} onClick={()=>changeOperation(dispatch,"*")}/>
-              <CalcButton value={"-"} onClick={()=>changeOperation(dispatch,"-")}/>
+              <CalcButton
+                onClick={() => dispatch(changeOperation("+"))}
+                value={"+"}
+              />
+              <CalcButton
+                onClick={() => dispatch(changeOperation("*"))}
+                value={"*"}
+              />
+              <CalcButton
+                onClick={() => dispatch(changeOperation("-"))}
+                value={"-"}
+              />
             </div>
 
             <div className="row ce_button">
-              <CalcButton value={"CE"} onClick={()=>clearDisplay(dispatch)} />
+              <CalcButton
+                onClick={() => dispatch(clearDisplay())}
+                value={"CE"}
+              />
             </div>
-
           </form>
         </div>
       </div>

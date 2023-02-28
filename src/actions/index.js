@@ -8,30 +8,30 @@ export const MEMORY_PLUS="MEMORY_PLUS";
 export const MEMORY_REPLACE="MEMORY_REPLACE";
 export const MEMORY_CLEAR="MEMORY_CLEAR";
 
-export const addOne = (reducerAction) => {
-  reducerAction ({ type: ADD_ONE });
-}
+export const addOne = () => {
+  return { type: ADD_ONE };
+};
 
-export const applyNumber = (reducerAction,number) => {
-  reducerAction ({ type: APPLY_NUMBER, payload: number });
-}
+export const applyNumber = (number) => {
+  return { type: APPLY_NUMBER, payload: number };
+};
 
-export const changeOperation=(reducerAction,operation)=>{
-  reducerAction({type:CHANGE_OPERATION , payload:operation})
-}
+export const changeOperation = (number) => {
+  return { type: CHANGE_OPERATION, payload: number };
+};
 
-export const clearDisplay=(reducerAction)=>{
-  reducerAction({type:CLEAR_DISPLAY})
-}
+export const clearDisplay = () => {
+  return { type: CLEAR_DISPLAY };
+};
 
-export const memoryPlus=(reducerAction)=>{
-  reducerAction({type:MEMORY_PLUS})
-}
+export const memoryPlus = (item) => {
+  return { type: MEMORY_PLUS, payload: item };
+};
 
-export const memoryReplace=(reducerAction)=>{
-  reducerAction({type:MEMORY_REPLACE})
-}
+export const memoryReplace = (number) => {
+  return { type: MEMORY_REPLACE, payload: number };
+};
 
-export const memoryClear=(reducerAction)=>{
-  reducerAction({type:MEMORY_CLEAR})
-}
+export const memoryClear = () => {
+  return { type: MEMORY_CLEAR };
+};
